@@ -7,6 +7,8 @@
   --clr-neutral-600: hsl(215, 32%, 27%);
   --clr-neutral-100: hsl(0, 0%, 100%);
 
+  --clr-cover: hsla(178, 100%, 50%, 0.5);
+
   --fs-body: 1.8rem;
 
   --ff-primary: 'Outfit', sans-serif;
@@ -70,6 +72,7 @@ body {
   border: 0;
   border-radius: var(--image-border-radius);
 
+  position: relative;
   overflow: hidden;
   line-height: 0;
 }
@@ -136,6 +139,37 @@ body {
   color: var(--clr-neutral-100);
 }
 
+@media (hover: hover) {
+  .header:hover,
+  .name:hover {
+    color: var(--clr-primary-400);
+  }
+
+  .image-cover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--clr-cover);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+
+  .image-container:hover .image-cover {
+    height: 100%;
+  }
+
+  .image-cover img {
+    width: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 @media (min-width: 60rem) {
   :root {
     --container-width: 35rem;
@@ -152,6 +186,11 @@ body {
   margin: auto 0 10px 0;
   color: var(--clr-primary-100);
   font-size: 1.6rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--clr-primary-400);
 }
 
 
