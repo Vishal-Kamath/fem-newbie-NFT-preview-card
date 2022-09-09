@@ -1,0 +1,158 @@
+:root {
+  --clr-primary-100: hsl(215, 51%, 70%);
+  --clr-primary-400: hsl(178, 100%, 50%);
+
+  --clr-neutral-900: hsl(217, 54%, 11%);
+  --clr-neutral-800: hsl(216, 50%, 16%);
+  --clr-neutral-600: hsl(215, 32%, 27%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fs-body: 1.8rem;
+
+  --ff-primary: 'Outfit', sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+
+  --container-width: 32.5rem;
+  --container-height: 54rem;
+  --container-padding: 2.25rem;
+  --container-border-radius: 1.5rem;
+
+  --image-width: 28rem;
+  --image-border-radius: 1rem;
+
+  --flex-margin: 2rem 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-primary-100);
+
+  font-family: var(--ff-primary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--clr-neutral-800);
+
+  width: var(--container-width);
+  height: var(--container-height);
+
+  padding: var(--container-padding);
+  margin-top: calc(50vh - (var(--container-height) / 2));
+
+  border: 0;
+  border-radius: var(--container-border-radius);
+}
+
+.image-container,
+.image-container img {
+  width: var(--image-width)
+}
+
+.image-container {
+  border: 0;
+  border-radius: var(--image-border-radius);
+
+  overflow: hidden;
+  line-height: 0;
+}
+
+.header {
+  color: var(--clr-neutral-100);
+
+  font-weight: var(--fw-regular);
+  font-size: 2.25rem;
+
+  padding: 2rem 0 1.5rem 0;
+}
+
+.description {
+  font-size: 1.6rem;
+  font-weight: var(--fw-regular);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--flex-margin);
+}
+
+.price,
+.days {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.price {
+  font-weight: var(--fw-semi-bold);
+  font-size: 1.5rem;
+
+  color: var(--clr-primary-400);
+}
+
+.days {
+  font-weight: var(--fw-light);
+  font-size: 1.5rem;
+}
+
+.creator {
+  border-top: .1rem solid var(--clr-neutral-600);
+  padding: 1.75rem 0;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 1.6rem;
+}
+
+.creator img {
+  border: 0.1rem solid var(--clr-neutral-100);
+  border-radius: 50%;
+
+  width: 3.25rem;
+
+  margin-right: 1.5rem;
+}
+
+.name {
+  color: var(--clr-neutral-100);
+}
+
+@media (min-width: 60rem) {
+  :root {
+    --container-width: 35rem;
+    --container-height: 58rem;
+    --container-padding: 2.5rem;
+
+    --image-width: 30rem;
+    --flex-margin: 2.5rem 0;
+  }
+}
+
+.attribution {
+  text-align: center;
+  margin: auto 0 10px 0;
+  color: var(--clr-primary-100);
+  font-size: 1.6rem;
+}
+
+
+
