@@ -170,6 +170,12 @@ body {
   }
 }
 
+@media (hover: none) {
+  .image-cover {
+    display: none;
+  }
+}
+
 @media (min-width: 60rem) {
   :root {
     --container-width: 35rem;
